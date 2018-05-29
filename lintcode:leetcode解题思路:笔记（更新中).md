@@ -1,9 +1,9 @@
-#Lintcode/Leetcode解题思路/笔记（更新中）
+# Lintcode/Leetcode解题思路/笔记（更新中）
 
 ## Notes of Lintcode/Leetcode 
 
 
-###0. Numbers of Islands
+### 0. Numbers of Islands
 
 
 - BFS/DFS都可以，但是DFS容易造成stack overflow,所以采用BFS比较好
@@ -14,11 +14,11 @@
 
 - 注意：要进行边界判断：不能超出边界了
 
-###1. Sequence Reconstruction
+### 1. Sequence Reconstruction
 - 将seqs中的各序列seq按照其中元素出现的先后顺序建立有向图。例如seqs中的某序列seq = [1, 2, 3]，对应有向图，顶点为1, 2, 3；边为(1, 2), (2, 3)。利用Map<Integer, Integer> indegree记录各顶点的入度（indegree），Map<Integer, Integer> map记录各顶点的后继（边）。
 - 然后对图执行拓扑排序，将得到的排序结果与原始序列org作比对即可
 
-###2. Topological Sorting
+### 2. Topological Sorting
 
 - using BFS
 - STEP 1: count indegree: 
