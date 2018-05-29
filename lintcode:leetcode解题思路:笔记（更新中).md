@@ -45,7 +45,20 @@
 - Description： Given a 2D grid, each cell is either a wall 2, a zombie 1 or people 0 (the number zero, one, two).Zombies can turn the nearest people(up/down/left/right) into zombies every day, but can not through wall. How long will it take to turn all people into zombies? Return -1 if can not turn all people into zombies.
 
 - Similar to question 0. Numbers of Islands, we need to traverse by levels using BFS.
-- What is different from question 0 is that we need to deal with number '2' in the matrix, so how could we deal with them? I think that we could just skip them, something like a wall.
+- What is different from question 0 is that we need to deal with number '2' in the matrix, so how could we deal with them? I think that we could just skip them, only judge whether nodes are equals to '0'. If not, using 'continue'.
+- how to generalized coordinates？
+```
+class Coordinate {
+    int x, y;
+    public Coordinate(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+```
+
+
+
 
 
 
