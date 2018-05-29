@@ -1,4 +1,4 @@
-#Lintcode/Leetcode解题思路/笔记（更新中）#
+#Lintcode/Leetcode解题思路/笔记（更新中）
 
 ## Notes of Lintcode/Leetcode 
 
