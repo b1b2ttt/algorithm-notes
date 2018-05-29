@@ -4,8 +4,6 @@
 
 
 ### 0. Numbers of Islands
-
-
 - BFS/DFS都可以，但是DFS容易造成stack overflow,所以采用BFS比较好
 
 - 从左上角开始向右，向下遍历，左上角坐标计为(0,0),并且使用count进行计数，若遇到1，则count加一
@@ -16,10 +14,10 @@
 
 ### 1. Sequence Reconstruction
 - 将seqs中的各序列seq按照其中元素出现的先后顺序建立有向图。例如seqs中的某序列seq = [1, 2, 3]，对应有向图，顶点为1, 2, 3；边为(1, 2), (2, 3)。利用Map<Integer, Integer> indegree记录各顶点的入度（indegree），Map<Integer, Integer> map记录各顶点的后继（边）。
+
 - 然后对图执行拓扑排序，将得到的排序结果与原始序列org作比对即可
 
 ### 2. Topological Sorting
-
 - using BFS
 - STEP 1: count indegree: 
   * initialize：
@@ -28,6 +26,7 @@
         Map<DirectedGraphNode, Integer> indegree = new HashMap<>();
         for(DirectedGraphNode node: graph){
             indegree.put(node, 0);//初始化
+            }
   * counting indegree
      
         ```  
@@ -41,6 +40,12 @@
        
 - STEP 2: topological sorting :put the nodes whose indegree is zero into queue 
 - STEP 3: BFS
+
+### 3.Zombie in Matrix(Lintcode)
+- Description： Given a 2D grid, each cell is either a wall 2, a zombie 1 or people 0 (the number zero, one, two).Zombies can turn the nearest people(up/down/left/right) into zombies every day, but can not through wall. How long will it take to turn all people into zombies? Return -1 if can not turn all people into zombies.
+
+- Similar to question 0. Numbers of Islands, we need to traverse by levels using BFS.
+- What is different from question 0 is that we need to deal with number '2' in the matrix, so how could we deal with them? I think that we could just skip them, something like a wall.
 
 
 
